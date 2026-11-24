@@ -1,0 +1,26 @@
+{
+  "meta": {
+    "title": "FAQ — Droobna",
+    "description": "Quick answers to the questions we hear most from our customers."
+  },
+  "pageIndex": "02 / 04",
+  "title": "How can we help?",
+  "subtitle": "Quick answers to the questions we hear most from our customers.",
+  "stats": {
+    "questions": "{count} questions",
+    "sections": "{count} sections"
+  },
+  "filters": {
+    "all": "All",
+    "booking": "Booking & rides",
+    "payment": "Payments & pricing",
+    "safety": "Safety",
+    "account": "Account"
+  },
+  "empty": "No questions in this section.",
+  "cta": {
+    "title": "Didn’t find your answer?",
+    "subtitle": "Our team is listening and will reply as soon as possible.",
+    "contact": "Contact us"
+  }
+}

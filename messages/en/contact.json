@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "title": "Contact us — Droobna",
+    "description": "Have a question or note about your ride? Our team is listening and will reply as soon as possible."
+  },
+  "pageIndex": "01 / 04",
+  "breadcrumb": {
+    "home": "Home",
+    "current": "Contact us"
+  },
+  "hero": {
+    "title": "Contact us",
+    "subtitle": "Have a question or note about your ride? Our team is listening and will reply as soon as possible."
+  },
+  "direct": {
+    "title": "Or reach us directly",
+    "emailLabel": "Email",
+    "emailHint": "For general inquiries and suggestions.",
+    "socialLabel": "Social",
+    "socialHint": "Follow our latest news and offers.",
+    "appTitle": "Issue with a ride?",
+    "appCta": "Faster in the app",
+    "appHint": "Open the same trip and request help so we get all the details.",
+    "hotlineTitle": "Still unresolved?",
+    "hotlineHint": "The unified Public Transport Authority hotline for passenger complaints."
+  },
+  "form": {
+    "title": "Send us a message",
+    "subtitle": "Fill in the details and we’ll reply to your email.",
+    "fullName": "Full name",
+    "fullNamePlaceholder": "Enter your name",
+    "phone": "Mobile number",
+    "phonePlaceholder": "5X XXX XXXX",
+    "email": "Email",
+    "emailPlaceholder": "name@example.com",
+    "inquiryType": "Inquiry type",
+    "inquiryPlaceholder": "Select inquiry type",
+    "inquiryOptions": {
+      "previous_trip": "Previous trip",
+      "billing": "Payments & invoices",
+      "account": "Account",
+      "suggestion": "Suggestion",
+      "other": "Other"
+    },
+    "tripId": "Trip ID (optional)",
+    "tripIdPlaceholder": "Found in trip details inside the app",
+    "message": "Your message",
+    "messagePlaceholder": "Share the details — the clearer they are, the faster we can help.",
+    "privacy": "I have read the Privacy Policy and agree to the use of my data to reply to this message.",
+    "privacyNote": "Your data is protected and only used to respond to you.",
+    "submit": "Send message",
+    "submitting": "Sending...",
+    "success": "Message accepted locally for development. Live delivery depends on API/webhook configuration.",
+    "error": "We couldn’t send your message. Please try again."
+  },
+  "faqTeaser": {
+    "title": "Your answer might already be here",
+    "subtitle": "Questions many of our customers ask.",
+    "all": "All FAQs"
+  }
+}

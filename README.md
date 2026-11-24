@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Droobna (دروبنا)
 
-## Getting Started
+Next.js marketing site for Droobna — AR/EN, SSR, SEO, and API-ready CMS queries. Design target: the Framer reference at `navigate-potential-356153.framer.app`.
 
-First, run the development server:
+## Stack
+
+- Next.js App Router + TypeScript + Tailwind CSS
+- `next-intl` (`ar` default RTL, `en` LTR)
+- TanStack Query + Axios API client (mock fallback until CMS is live)
+- Motion (`motion`) for section animations
+- Zod-validated env
+
+## Setup
 
 ```bash
+npm install
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) — middleware redirects to `/ar`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Routes
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Path | Description |
+|---|---|
+| `/ar`, `/en` | Home |
+| `/[locale]/contact` | Contact + form → `POST /api/contact` |
+| `/[locale]/faq` | FAQ (API / mock) |
+| `/[locale]/privacy` | Privacy (API / mock) |
+| `/[locale]/terms` | Terms (API / mock) |
 
-## Learn More
+## Translations
 
-To learn more about Next.js, take a look at the following resources:
+Per-page message files live under `messages/{ar,en}/` (`common`, `home`, `contact`, `faq`, `privacy`, `terms`).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## API
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Configure in `.env.local`:
 
-## Deploy on Vercel
+- `NEXT_PUBLIC_API_BASE_URL` + `NEXT_PUBLIC_API_PREFIX`
+- Optional `CONTACT_WEBHOOK_URL` / `API_SECRET` for contact forwarding
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Until the backend responds, services fall back to `src/lib/api/mocks/*`.

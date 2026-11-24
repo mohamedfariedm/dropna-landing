@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 48" fill="none" role="img" aria-label="DROOBNA">
+  <g fill="currentColor">
+    <path d="M8 8h22c10 0 18 7.5 18 16s-8 16-18 16H8V8zm14 8v16h8c4.8 0 8-3.4 8-8s-3.2-8-8-8h-8z"/>
+    <path d="M58 8h14c10 0 18 7.5 18 16s-8 16-18 16H58V8zm14 8v16c4.8 0 8-3.4 8-8s-3.2-8-8-8z"/>
+    <circle cx="112" cy="24" r="13" fill="none" stroke="currentColor" stroke-width="7"/>
+    <circle cx="112" cy="24" r="4.5"/>
+    <circle cx="146" cy="24" r="13" fill="none" stroke="currentColor" stroke-width="7"/>
+    <circle cx="146" cy="24" r="4.5"/>
+    <path d="M170 40V8h12l14 20.5V8h12v32h-12L182 19.5V40h-12z"/>
+    <path d="M218 8h14l12 32h-13l-2-6h-14l-2 6h-13L218 8zm2.5 18L224 14l3.5 12h-7z"/>
+    <path d="M252 8h14c8.5 0 14 4.8 14 12.5 0 5.2-2.8 9-7.2 10.8L284 40h-14l-8.5-8H266v8h-14V8zm14 8v8c3.2 0 5-.8 5-4s-1.8-4-5-4z"/>
+  </g>
+  <path d="M268 34c0-4 3-6 6.5-7.5 1.8 2.4 2.5 4.5 2.5 7 0 4.2-2.6 7.5-6.5 7.5S268 38.2 268 34z" fill="currentColor" opacity=".9"/>
+  <circle cx="274.5" cy="33.2" r="1.6" fill="#1c2a1c"/>
+</svg>

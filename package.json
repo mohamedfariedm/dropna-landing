@@ -6,20 +6,35 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "test:e2e": "playwright test tests/functional.spec.ts",
+    "test:visual": "playwright test tests/visual-regression.spec.ts",
+    "test:all": "playwright test"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.107.1",
+    "axios": "^1.21.1",
+    "clsx": "^2.1.1",
+    "motion": "^14.14.0",
     "next": "16.4.6",
+    "next-intl": "^4.15.1",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "tailwind-merge": "^3.7.0",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@playwright/test": "^1.65.1",
     "@tailwindcss/turbopack": "4.3.3",
-    "@types/node": "^20",
+    "@types/node": "^20.19.43",
+    "@types/pngjs": "^6.0.5",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.6",
+    "pixelmatch": "^8.0.0",
+    "pngjs": "^7.0.0",
     "tailwindcss": "4.3.3",
     "typescript": "^5"
   }

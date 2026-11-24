@@ -1,0 +1,55 @@
+{
+  "brand": "Droobna",
+  "tagline": "Different destinations, one Droobna.",
+  "nav": {
+    "home": "Home",
+    "app": "App",
+    "services": "Services",
+    "classes": "Classes",
+    "features": "Features",
+    "contact": "Contact us",
+    "faq": "FAQ",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "cookies": "Cookie settings",
+    "download": "Get the app",
+    "menuCaption": "Get Droobna on",
+    "menu": "Menu",
+    "close": "Close",
+    "language": "العربية"
+  },
+  "footer": {
+    "download": "Get the app",
+    "legal": "Legal",
+    "help": "Help",
+    "brandNav": "Droobna",
+    "cr": "CR No.: ——————   ·   VAT No.: ——————",
+    "rights": "© {year} Droobna. All rights reserved.",
+    "email": "Email",
+    "social": "Social",
+    "stores": {
+      "appStorePrefix": "Download on the",
+      "appStoreName": "App Store",
+      "playStorePrefix": "Get it on",
+      "playStoreName": "Google Play"
+    }
+  },
+  "stores": {
+    "appStore": "Download on the App Store",
+    "appStorePrefix": "Download on the",
+    "appStoreName": "App Store",
+    "playStore": "GET IT ON Google Play",
+    "playStorePrefix": "GET IT ON",
+    "playStoreName": "Google Play"
+  },
+  "meta": {
+    "siteName": "Droobna",
+    "defaultTitle": "Droobna — every ride is easier",
+    "defaultDescription": "Solo or shared, right now or scheduled. Download Droobna and book in a tap."
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "notFound": "Page not found",
+    "loading": "Loading..."
+  }
+}

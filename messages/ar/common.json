@@ -1,0 +1,55 @@
+{
+  "brand": "دروبنا",
+  "tagline": "تختلف وجهاتنا.. ودروبنا واحد",
+  "nav": {
+    "home": "الرئيسية",
+    "app": "التطبيق",
+    "services": "خدماتنا",
+    "classes": "الفئات",
+    "features": "المميزات",
+    "contact": "تواصل معنا",
+    "faq": "الأسئلة الشائعة",
+    "privacy": "سياسة الخصوصية",
+    "terms": "شروط الاستخدام",
+    "cookies": "إعدادات الكوكيز",
+    "download": "حمّل التطبيق",
+    "menuCaption": "حمّل دروبنا من",
+    "menu": "القائمة",
+    "close": "إغلاق",
+    "language": "English"
+  },
+  "footer": {
+    "download": "حمّل التطبيق",
+    "legal": "قانوني",
+    "help": "المساعدة",
+    "brandNav": "دروبنا",
+    "cr": "السجل التجاري: ——————   ·   الرقم الضريبي: ——————",
+    "rights": "© {year} دروبنا. جميع الحقوق محفوظة.",
+    "email": "البريد الإلكتروني",
+    "social": "حساباتنا",
+    "stores": {
+      "appStorePrefix": "حمّله من",
+      "appStoreName": "App Store",
+      "playStorePrefix": "متوفر على",
+      "playStoreName": "Google Play"
+    }
+  },
+  "stores": {
+    "appStore": "حمّله من App Store",
+    "appStorePrefix": "حمّله من",
+    "appStoreName": "App Store",
+    "playStore": "متوفر على Google Play",
+    "playStorePrefix": "متوفر على",
+    "playStoreName": "Google Play"
+  },
+  "meta": {
+    "siteName": "دروبنا",
+    "defaultTitle": "دروبنا — مشوارك أسهل",
+    "defaultDescription": "مشوار فردي أو مشترك، الحين أو بموعد. حمّل تطبيق دروبنا واحجز بسهولة."
+  },
+  "errors": {
+    "generic": "حدث خطأ. حاول مرة أخرى.",
+    "notFound": "الصفحة غير موجودة",
+    "loading": "جاري التحميل..."
+  }
+}

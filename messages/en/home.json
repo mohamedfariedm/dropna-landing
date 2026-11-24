@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "title": "Droobna — every ride is easier",
+    "description": "With Droobna, every ride is easier. Solo or shared, right now or scheduled."
+  },
+  "hero": {
+    "title": "With Droobna, every ride is easier.",
+    "line1": "With Droobna,",
+    "line2": "every ride is easier.",
+    "subtitle": "Solo or shared, right now or scheduled.",
+    "sectionLabel": "Home"
+  },
+  "app": {
+    "title": "Your whole ride, in your hand.",
+    "sectionLabel": "App",
+    "items": {
+      "book": {
+        "title": "Book in a tap",
+        "desc": "From anywhere, fast and easy."
+      },
+      "choose": {
+        "title": "Choose your ride",
+        "desc": "Solo or shared, in the class that suits you."
+      },
+      "track": {
+        "title": "Track your driver",
+        "desc": "Live on the map, moment by moment."
+      }
+    }
+  },
+  "services": {
+    "eyebrow": "Pick the way that fits your day.",
+    "title": "A service for every ride",
+    "sectionLabel": "Services",
+    "items": {
+      "scheduled": {
+        "title": "Scheduled ride",
+        "desc": "Set your time, and your driver is there on time."
+      },
+      "instant": {
+        "title": "Instant ride",
+        "desc": "Request your ride right away."
+      },
+      "solo": {
+        "title": "Solo ride",
+        "desc": "The car is all yours."
+      },
+      "shared": {
+        "title": "Shared ride",
+        "desc": "Share the trip with other riders."
+      }
+    }
+  },
+  "classes": {
+    "eyebrow": "Choose your class and see the price before you confirm.",
+    "title": "A class for every ride",
+    "sectionLabel": "Classes",
+    "items": {
+      "lite": {
+        "name": "Droobna Lite",
+        "desc": "The best value, for your daily rides."
+      },
+      "standard": {
+        "name": "Droobna",
+        "desc": "The balance of price and comfort."
+      },
+      "comfort": {
+        "name": "Droobna Standard",
+        "desc": "A premium class for a more comfortable ride."
+      },
+      "plus": {
+        "name": "Droobna Plus",
+        "desc": "Our top class, for extra comfort."
+      }
+    }
+  },
+  "features": {
+    "title": "Your comfort and safety",
+    "sectionLabel": "Features",
+    "items": {
+      "driver": {
+        "title": "Know your driver",
+        "desc": "Car, plate and rating before pickup."
+      },
+      "share": {
+        "title": "Share your trip",
+        "desc": "Your family can follow your ride."
+      },
+      "promo": {
+        "title": "Promo codes",
+        "desc": "Save on your rides in the app."
+      },
+      "places": {
+        "title": "Saved places",
+        "desc": "Home, work and anywhere you go often."
+      },
+      "pay": {
+        "title": "Pay your way",
+        "desc": "Payment methods that suit you.",
+        "badge": "Credit card",
+        "sectionLabel": "Pay"
+      }
+    }
+  },
+  "download": {
+    "title": "Your next ride, on your phone.",
+    "line1": "Your next ride,",
+    "line2": "on your phone.",
+    "subtitle": "Download Droobna from your app store.",
+    "sectionLabel": "Get the app"
+  }
+}

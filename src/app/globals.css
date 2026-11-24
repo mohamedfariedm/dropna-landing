@@ -1,26 +1,166 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-forest: #223219;
+  --color-forest-deep: #16231b;
+  --color-forest-mid: #2a3d22;
+  --color-studio: #16231b;
+  --color-app: #4b6d37;
+  --color-cream: #edf6e8;
+  --color-cream-soft: #f3f9ef;
+  --color-lime: #87c55d;
+  --color-lime-bright: #9bd472;
+  --color-ink: #142014;
+  --color-muted: #5f6b5c;
+  --color-white: #ffffff;
+  --color-border: rgba(20, 32, 20, 0.1);
+  --radius-shell: 40px;
+  --radius-card: 1.75rem;
+  --header-h: 6.5rem;
+  --section-y: clamp(4rem, 8vw, 6.5rem);
+  --background: var(--color-forest);
+  --foreground: var(--color-cream);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-forest: var(--color-forest);
+  --color-forest-deep: var(--color-forest-deep);
+  --color-forest-mid: var(--color-forest-mid);
+  --color-studio: var(--color-studio);
+  --color-app: var(--color-app);
+  --color-cream: var(--color-cream);
+  --color-cream-soft: var(--color-cream-soft);
+  --color-lime: var(--color-lime);
+  --color-lime-bright: var(--color-lime-bright);
+  --color-ink: var(--color-ink);
+  --color-muted: var(--color-muted);
+  --font-sans: var(--font-display), var(--font-body);
+  --font-display: var(--font-display);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html[lang="en"] {
+  --font-sans: var(--font-body), var(--font-display);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  min-height: 100%;
+  background: var(--color-forest);
+  color: var(--color-ink);
+  font-family: var(--font-display), var(--font-body), system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+html[lang="en"] body {
+  font-family: var(--font-body), var(--font-display), system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), var(--font-body), system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.18;
+}
+
+html[lang="en"] h1,
+html[lang="en"] h2,
+html[lang="en"] h3,
+html[lang="en"] h4 {
+  font-family: var(--font-body), var(--font-display), system-ui, sans-serif;
+}
+
+/* Framer-style custom cursor (fine pointer only; toggled by CustomCursor) */
+html.has-custom-cursor,
+html.has-custom-cursor * {
+  cursor: none !important;
+}
+
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-lime) 40%, white);
+}
+
+.shell {
+  border-radius: var(--radius-shell) var(--radius-shell) 0 0;
+  overflow: clip;
+}
+
+.section-pad {
+  padding-block: var(--section-y);
+  padding-inline: clamp(1.25rem, 4vw, 3.5rem);
+}
+
+.container-narrow {
+  width: min(1120px, 100%);
+  margin-inline: auto;
+}
+
+.container-wide {
+  width: min(1280px, 100%);
+  margin-inline: auto;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--color-lime);
+  outline-offset: 3px;
+}
+
+.image-scrim {
+  background: linear-gradient(
+    180deg,
+    transparent 35%,
+    rgba(10, 18, 10, 0.72) 100%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
