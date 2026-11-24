@@ -7,11 +7,13 @@ type EditorialHeroProps = {
   breadcrumbCurrent: string;
   breadcrumbHomeLabel: string;
   meta?: React.ReactNode;
+  /** Slot at inline-end (left in RTL), e.g. FAQ search. */
+  bottomEnd?: React.ReactNode;
 };
 
 /**
- * Framer “Hero — Editorial” shell shared by FAQ / Contact / Privacy / Terms.
- * Desktop: bg #16231B, pad 88/80/72, h1 ~104px, divider, bottom meta+subtitle.
+ * Figma “Page hero — Editorial” shared by FAQ / Contact / Privacy / Terms.
+ * Desktop: bg #16231B, pad 88/80, H1 136px, lime accent under breadcrumb, divider.
  */
 export function EditorialHero({
   pageIndex,
@@ -20,50 +22,89 @@ export function EditorialHero({
   breadcrumbCurrent,
   breadcrumbHomeLabel,
   meta,
+  bottomEnd,
 }: EditorialHeroProps) {
+  const endSlot = bottomEnd ?? meta;
+
   return (
     <section className="bg-studio text-cream">
-      <div className="mx-auto w-full max-w-[1280px] px-5 pb-12 pt-10 sm:px-10 sm:pb-[72px] sm:pt-[88px] lg:px-20">
-        <div className="mb-8 flex flex-wrap items-start justify-between gap-4">
-          <p className="font-[family-name:var(--font-body)] text-[15px] font-normal text-white/40">
+      <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-8 px-5 pb-10 pt-10 sm:gap-9 sm:px-10 sm:pb-[72px] sm:pt-[88px] lg:px-20">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <nav
+            className="order-1 flex items-center gap-2 text-[13px] sm:text-[15px] ltr:order-2"
+            aria-label="Breadcrumb"
+          >
+            <span className="order-1 font-medium text-[#c3e2b1] ltr:order-3">
+              {breadcrumbCurrent}
+            </span>
+            <ChevronIcon />
+            <Link
+              href="/"
+              className="order-3 text-white transition hover:text-white/80 ltr:order-1"
+            >
+              {breadcrumbHomeLabel}
+            </Link>
+          </nav>
+          <p className="order-2 font-[family-name:var(--font-body)] text-[13px] font-normal text-white sm:text-[15px] ltr:order-1">
             {pageIndex}
           </p>
-          <nav className="flex flex-col items-end gap-2">
-            <div className="flex items-center gap-2 text-sm">
-              <Link
-                href="/"
-                className="text-white/60 transition hover:text-white"
-              >
-                {breadcrumbHomeLabel}
-              </Link>
-              <span className="text-[#c3e2b1]">{breadcrumbCurrent}</span>
-            </div>
-            <span className="h-1.5 w-16 rounded-[3px] bg-lime" aria-hidden />
-          </nav>
         </div>
 
-        <h1 className="max-w-5xl text-[2rem] font-bold leading-[1.18] text-white sm:text-6xl lg:text-[104px] lg:leading-[1.18]">
+        <span
+          className="ml-auto h-1.5 w-12 shrink-0 rounded-[3px] bg-lime sm:h-[6px] sm:w-16"
+          aria-hidden
+        />
+
+        <h1 className="w-full text-[2rem] font-bold leading-[1.05] tracking-[-0.02em] text-white sm:text-6xl lg:text-[136px] lg:leading-[1.05] lg:tracking-[-2.72px]">
           {title}
         </h1>
 
-        <div className="mt-8 h-px w-full bg-white/14" />
+        <div className="h-px w-full bg-white/14" />
 
-        <div className="mt-6 flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
-          {/* First in DOM → start side (right in RTL) — Framer puts subtitle at start */}
-          {subtitle ? (
-            <p className="max-w-[600px] text-base leading-8 text-white/80 sm:text-xl sm:leading-8">
-              {subtitle}
-            </p>
-          ) : (
-            <div />
-          )}
-          {meta ? (
-            <div className="space-y-1.5 text-sm leading-relaxed text-white/55 sm:text-end">
-              {meta}
-            </div>
-          ) : null}
-        </div>
+        {(subtitle || endSlot) && (
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+            {subtitle ? (
+              <p className="max-w-[620px] text-base leading-[1.6] text-white sm:text-[22px] sm:leading-[1.6]">
+                {subtitle}
+              </p>
+            ) : (
+              <div />
+            )}
+            {endSlot ? (
+              <div
+                className={
+                  bottomEnd
+                    ? "w-full sm:max-w-[600px]"
+                    : "space-y-1.5 font-[family-name:var(--font-display)] text-[13px] leading-[1.5] text-white sm:text-[15px] sm:text-start"
+                }
+              >
+                {endSlot}
+              </div>
+            ) : null}
+          </div>
+        )}
       </div>
     </section>
+  );
+}
+
+function ChevronIcon() {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      aria-hidden
+      className="order-2 shrink-0 text-white/50 ltr:rotate-180"
+    >
+      <path
+        d="M10 3.5 5.5 8 10 12.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
   );
 }

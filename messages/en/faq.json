@@ -6,6 +6,9 @@
   "pageIndex": "02 / 04",
   "title": "How can we help?",
   "subtitle": "Quick answers to the questions we hear most from our customers.",
+  "searchPlaceholder": "Search your question",
+  "searchPlaceholderDesktop": "Search your question, e.g. promo code",
+  "searchButton": "Search",
   "stats": {
     "questions": "{count} questions",
     "sections": "{count} sections"

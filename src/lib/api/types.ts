@@ -40,6 +40,8 @@ export interface LegalSection {
   title: LocalizedString;
   body: LocalizedString;
   bullets?: LocalizedString[];
+  /** Soft cream callout around bullets (Figma “Highlight”). */
+  highlighted?: boolean;
 }
 
 export interface LegalDocument {

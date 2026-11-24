@@ -13,7 +13,8 @@
   "summarySubtitle": "The summary before the details.",
   "cta": {
     "title": "Have a question about this page?",
-    "contact": "Contact us"
+    "contact": "Contact us",
+    "emailPrefix": "Email us at"
   },
   "empty": "Content is currently unavailable."
 }

@@ -56,6 +56,11 @@
   "faqTeaser": {
     "title": "Your answer might already be here",
     "subtitle": "Questions many of our customers ask.",
-    "all": "All FAQs"
+    "all": "All FAQs",
+    "chips": [
+      "How do I cancel my ride?",
+      "I left something in the car",
+      "How do I use a promo code?"
+    ]
   }
 }

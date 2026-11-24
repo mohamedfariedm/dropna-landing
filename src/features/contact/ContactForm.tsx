@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 import { z } from "zod";
@@ -36,12 +37,17 @@ export function ContactForm() {
     e.preventDefault();
     setErrors({});
     const form = new FormData(e.currentTarget);
+    const rawPhone = String(form.get("phone") || "").trim();
     const raw = {
       fullName: String(form.get("fullName") || ""),
-      phone: String(form.get("phone") || "") || undefined,
+      phone: rawPhone
+        ? rawPhone.startsWith("+")
+          ? rawPhone
+          : `+966${rawPhone.replace(/\s/g, "")}`
+        : undefined,
       email: String(form.get("email") || ""),
       inquiryType: String(form.get("inquiryType") || ""),
-      tripId: String(form.get("tripId") || "") || undefined,
+      tripId: undefined,
       message: String(form.get("message") || ""),
       privacyAccepted: form.get("privacyAccepted") === "on",
     };
@@ -69,11 +75,11 @@ export function ContactForm() {
   }
 
   const fieldClass =
-    "focus-ring h-14 w-full rounded-2xl border-0 bg-[#F6F8F5] px-[18px] text-base text-[#1f1f1f] outline-none transition placeholder:text-[#8A9484] focus:ring-2 focus:ring-forest/20";
+    "focus-ring h-14 w-full rounded-2xl border border-[#dce4d6] bg-[#F6F8F5] px-[18px] text-base text-[#1f1f1f] outline-none transition placeholder:text-[#8A9484] focus:ring-2 focus:ring-forest/20";
 
   return (
-    <form onSubmit={onSubmit} className="space-y-4" noValidate>
-      <div className="grid gap-4 sm:grid-cols-2">
+    <form onSubmit={onSubmit} className="space-y-6" noValidate>
+      <div className="grid gap-5 sm:grid-cols-2 sm:gap-x-5 sm:gap-y-6">
         <Field label={t("fullName")} error={errors.fullName}>
           <input
             name="fullName"
@@ -83,12 +89,18 @@ export function ContactForm() {
           />
         </Field>
         <Field label={t("phone")} error={errors.phone}>
-          <input
-            name="phone"
-            inputMode="tel"
-            placeholder={t("phonePlaceholder")}
-            className={fieldClass}
-          />
+          <div className="flex h-14 items-center gap-2.5 rounded-2xl border border-[#dce4d6] bg-[#F6F8F5] px-[18px]">
+            <span className="font-[family-name:var(--font-body)] text-base font-semibold text-[#1f1f1f]">
+              +966
+            </span>
+            <span className="h-6 w-px bg-[#dce4d6]" aria-hidden />
+            <input
+              name="phone"
+              inputMode="tel"
+              placeholder={t("phonePlaceholder")}
+              className="focus-ring min-w-0 flex-1 border-0 bg-transparent text-base text-[#1f1f1f] outline-none placeholder:text-[#8A9484]"
+            />
+          </div>
         </Field>
         <Field label={t("email")} error={errors.email}>
           <input
@@ -100,7 +112,12 @@ export function ContactForm() {
           />
         </Field>
         <Field label={t("inquiryType")} error={errors.inquiryType}>
-          <select name="inquiryType" required className={fieldClass} defaultValue="">
+          <select
+            name="inquiryType"
+            required
+            className={cn(fieldClass, "appearance-none")}
+            defaultValue=""
+          >
             <option value="" disabled>
               {t("inquiryPlaceholder")}
             </option>
@@ -113,14 +130,6 @@ export function ContactForm() {
         </Field>
       </div>
 
-      <Field label={t("tripId")} error={errors.tripId}>
-        <input
-          name="tripId"
-          placeholder={t("tripIdPlaceholder")}
-          className={fieldClass}
-        />
-      </Field>
-
       <Field label={t("message")} error={errors.message}>
         <textarea
           name="message"
@@ -131,18 +140,21 @@ export function ContactForm() {
         />
       </Field>
 
-      <label className="flex items-start gap-3 text-sm text-ink/80">
+      <label className="flex items-start gap-3 text-[15px] leading-[1.6] text-[#373737]">
         <input
           type="checkbox"
           name="privacyAccepted"
           required
-          className="mt-1 h-[22px] w-[22px] rounded-[7px] border-black/20"
+          className="mt-0.5 h-[22px] w-[22px] shrink-0 rounded-[7px] border-[1.5px] border-[#b9c6b1]"
         />
         <span>
           {locale === "ar" ? (
             <>
               قرأت{" "}
-              <Link href="/privacy" className="underline underline-offset-2">
+              <Link
+                href="/privacy"
+                className="font-medium text-[#3f7a22] underline underline-offset-2"
+              >
                 سياسة الخصوصية
               </Link>
               ، وأوافق على استخدام بياناتي للرد على رسالتي.
@@ -150,7 +162,10 @@ export function ContactForm() {
           ) : (
             <>
               I have read the{" "}
-              <Link href="/privacy" className="underline underline-offset-2">
+              <Link
+                href="/privacy"
+                className="font-medium text-[#3f7a22] underline underline-offset-2"
+              >
                 Privacy Policy
               </Link>{" "}
               and agree to the use of my data to reply to this message.
@@ -161,15 +176,35 @@ export function ContactForm() {
       {errors.privacyAccepted ? (
         <p className="text-sm text-red-700">{errors.privacyAccepted}</p>
       ) : null}
-      <p className="text-sm text-muted">{t("privacyNote")}</p>
 
-      <button
-        type="submit"
-        disabled={mutation.isPending}
-        className="focus-ring inline-flex rounded-full bg-forest px-6 py-3 text-sm font-semibold text-cream transition hover:bg-forest-mid disabled:opacity-60"
-      >
-        {mutation.isPending ? t("submitting") : t("submit")}
-      </button>
+      <div className="h-px w-full bg-[rgba(34,50,25,0.08)]" />
+
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <p className="flex items-center gap-2 text-sm text-[#373737]">
+          <Image
+            src="/assets/icons/lock.svg"
+            alt=""
+            width={18}
+            height={18}
+            className="size-[18px]"
+          />
+          {t("privacyNote")}
+        </p>
+        <button
+          type="submit"
+          disabled={mutation.isPending}
+          className="focus-ring inline-flex h-[52px] items-center justify-center gap-2.5 rounded-full bg-lime px-7 text-base font-semibold text-[#1f1f1f] transition hover:brightness-95 disabled:opacity-60"
+        >
+          <Image
+            src="/assets/icons/arrow.svg"
+            alt=""
+            width={18}
+            height={18}
+            className="size-[18px] ltr:-scale-x-100"
+          />
+          {mutation.isPending ? t("submitting") : t("submit")}
+        </button>
+      </div>
 
       {mutation.isSuccess ? (
         <p className="rounded-xl bg-lime/20 px-4 py-3 text-sm text-forest">
@@ -196,7 +231,7 @@ function Field({
 }) {
   return (
     <label className="block space-y-2">
-      <span className="text-sm font-medium text-ink/80">{label}</span>
+      <span className="text-sm font-medium text-[#1f1f1f]">{label}</span>
       {children}
       {error ? <span className="block text-xs text-red-700">{error}</span> : null}
     </label>

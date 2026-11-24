@@ -50,6 +50,8 @@
   "errors": {
     "generic": "Something went wrong. Please try again.",
     "notFound": "Page not found",
+    "notFoundBody": "The page you’re looking for no longer exists or has moved. You can go back home or contact us.",
+    "backHome": "Back to home",
     "loading": "Loading..."
   }
 }

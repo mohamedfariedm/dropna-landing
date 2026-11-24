@@ -1,0 +1,19 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="176" height="176" viewBox="0 0 176 176" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="0 &#226;&#128;&#148; wheel" clip-path="url(#clip0_0_16)">
+<path id="Vector" d="M163.68 88C163.68 129.797 129.797 163.68 88 163.68C46.2031 163.68 12.32 129.797 12.32 88C12.32 46.2031 46.2031 12.32 88 12.32C129.797 12.32 163.68 46.2031 163.68 88Z" stroke-width="22.88" stroke="#223219"/>
+<path id="Vector_2" d="M135.52 88C135.52 114.245 114.245 135.52 88 135.52C61.7554 135.52 40.48 114.245 40.48 88C40.48 61.7554 61.7554 40.48 88 40.48C114.245 40.48 135.52 61.7554 135.52 88Z" stroke-width="7.04" stroke="#87C55D"/>
+<path id="Vector_3" d="M88 102.08C95.7762 102.08 102.08 95.7762 102.08 88C102.08 80.2238 95.7762 73.92 88 73.92C80.2238 73.92 73.92 80.2238 73.92 88C73.92 95.7762 80.2238 102.08 88 102.08Z" fill="#223219"/>
+<g id="Group">
+<path id="Vector_4" d="M88 73.92V44" stroke-width="7.04" stroke-linecap="round" stroke="#223219"/>
+<path id="Vector_5" d="M101.376 83.688L129.888 74.36" stroke-width="7.04" stroke-linecap="round" stroke="#223219"/>
+<path id="Vector_6" d="M96.272 99.3506L113.872 123.639" stroke-width="7.04" stroke-linecap="round" stroke="#223219"/>
+<path id="Vector_7" d="M79.7279 99.3506L62.1279 123.639" stroke-width="7.04" stroke-linecap="round" stroke="#223219"/>
+<path id="Vector_8" d="M74.624 83.688L46.112 74.36" stroke-width="7.04" stroke-linecap="round" stroke="#223219"/>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_16">
+<rect width="176" height="176" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -6,6 +6,9 @@
   "pageIndex": "02 / 04",
   "title": "كيف نقدر نساعدك؟",
   "subtitle": "إجابات سريعة لأكثر الأسئلة اللي توصلنا من عملائنا.",
+  "searchPlaceholder": "ابحث عن سؤالك",
+  "searchPlaceholderDesktop": "ابحث عن سؤالك، مثل: كود الخصم",
+  "searchButton": "بحث",
   "stats": {
     "questions": "{count} سؤال",
     "sections": "{count} أقسام"

@@ -8,29 +8,29 @@ export const termsMock: LegalDocument = {
     {
       id: "s1",
       text: {
-        ar: "تقدر تلغي مجانًا قبل ما يقبل السائق الطلب.",
-        en: "You can cancel for free before a driver accepts.",
-      },
-    },
-    {
-      id: "s2",
-      text: {
         ar: "السعر يظهر لك قبل ما تأكد طلبك.",
         en: "You’ll see the price before you confirm.",
       },
     },
     {
+      id: "s2",
+      text: {
+        ar: "تقدر تلغي مجانًا قبل ما يقبل السائق الطلب.",
+        en: "You can cancel for free before a driver accepts.",
+      },
+    },
+    {
       id: "s3",
       text: {
-        ar: "تقدر تحذف حسابك في أي وقت.",
-        en: "You can delete your account anytime.",
+        ar: "احترامك للسائق والسيارة جزء من الاتفاق.",
+        en: "Respect for the driver and vehicle is part of the agreement.",
       },
     },
     {
       id: "s4",
       text: {
-        ar: "احترامك للسائق والسيارة جزء من الاتفاق.",
-        en: "Respect for the driver and vehicle is part of the agreement.",
+        ar: "تقدر تحذف حسابك في أي وقت.",
+        en: "You can delete your account anytime.",
       },
     },
   ],
@@ -48,10 +48,25 @@ export const termsMock: LegalDocument = {
       id: "defs",
       number: "02",
       title: { ar: "التعريفات", en: "Definitions" },
-      body: {
-        ar: "دروبنا: الجهة المشغّلة للتطبيق والموقع. العميل: كل من يستخدم التطبيق لطلب مشوار. السائق: الشخص اللي ينفّذ المشوار. المشوار: خدمة التوصيل من نقطة الانطلاق إلى الوجهة.",
-        en: "Droobna: the operator of the app and website. Customer: anyone using the app to request a ride. Driver: the person fulfilling the ride. Ride: transport from pickup to destination.",
-      },
+      body: { ar: "", en: "" },
+      bullets: [
+        {
+          ar: "دروبنا: الجهة المشغّلة للتطبيق والموقع.",
+          en: "Droobna: the operator of the app and website.",
+        },
+        {
+          ar: "العميل: كل من يستخدم التطبيق لطلب مشوار.",
+          en: "Customer: anyone using the app to request a ride.",
+        },
+        {
+          ar: "السائق: الشخص اللي ينفّذ المشوار.",
+          en: "Driver: the person fulfilling the ride.",
+        },
+        {
+          ar: "المشوار: خدمة التوصيل من نقطة الانطلاق إلى الوجهة.",
+          en: "Ride: transport from pickup to destination.",
+        },
+      ],
     },
     {
       id: "account",
@@ -84,10 +99,22 @@ export const termsMock: LegalDocument = {
       id: "cancel",
       number: "06",
       title: { ar: "الإلغاء والاسترداد", en: "Cancellation and refunds" },
-      body: {
-        ar: "تقدر تلغي مجانًا قبل ما يقبل السائق طلبك. إذا ألغيت بعد قبول الطلب، قد تنطبق رسوم إلغاء تظهر لك قبل ما تأكد الإلغاء. إذا انخصم منك مبلغ بالخطأ، نرجّعه لنفس وسيلة الدفع حسب المدة اللي تحتاجها جهة الدفع.",
-        en: "Cancel for free before driver acceptance. After acceptance, a fee may apply and will be shown before you confirm. Mistaken charges are refunded to the same method per the payment provider’s timeline.",
-      },
+      body: { ar: "", en: "" },
+      highlighted: true,
+      bullets: [
+        {
+          ar: "تقدر تلغي مجانًا قبل ما يقبل السائق طلبك.",
+          en: "You can cancel for free before a driver accepts your request.",
+        },
+        {
+          ar: "إذا ألغيت بعد قبول الطلب، قد تنطبق رسوم إلغاء تظهر لك قبل ما تأكد الإلغاء.",
+          en: "If you cancel after acceptance, a cancellation fee may apply and is shown before you confirm.",
+        },
+        {
+          ar: "إذا انخصم منك مبلغ بالخطأ، نرجّعه لنفس وسيلة الدفع حسب المدة اللي تحتاجها جهة الدفع.",
+          en: "Mistaken charges are refunded to the same payment method per the provider’s timeline.",
+        },
+      ],
     },
     {
       id: "conduct",
@@ -96,10 +123,25 @@ export const termsMock: LegalDocument = {
         ar: "التزاماتك أثناء المشوار",
         en: "Your obligations during the ride",
       },
-      body: {
-        ar: "احترام السائق والتعامل معه بلباقة، المحافظة على السيارة وعدم إتلافها، ربط حزام الأمان طول المشوار، وعدم نقل أي مواد ممنوعة نظامًا.",
-        en: "Treat the driver respectfully, care for the vehicle, wear a seatbelt throughout, and do not transport prohibited materials.",
-      },
+      body: { ar: "", en: "" },
+      bullets: [
+        {
+          ar: "احترام السائق والتعامل معه بلباقة.",
+          en: "Treat the driver respectfully and courteously.",
+        },
+        {
+          ar: "المحافظة على السيارة وعدم إتلافها.",
+          en: "Care for the vehicle and do not damage it.",
+        },
+        {
+          ar: "ربط حزام الأمان طول المشوار.",
+          en: "Wear a seatbelt throughout the ride.",
+        },
+        {
+          ar: "عدم نقل أي مواد ممنوعة نظامًا.",
+          en: "Do not transport any legally prohibited materials.",
+        },
+      ],
     },
     {
       id: "lost",
