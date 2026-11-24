@@ -1,7 +1,7 @@
 "use client";
 
 import { useLocale, useTranslations } from "next-intl";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, type CSSProperties } from "react";
 import { Reveal } from "@/components/motion/Reveal";
 
 const classKeys = ["lite", "standard", "comfort", "plus"] as const;
@@ -259,7 +259,7 @@ function CompactCopy({
   const counter = `scale(${1 / scale})`;
   const direction = rtl ? "rtl" : "ltr";
   const align = rtl ? "right" : "left";
-  const nameStyle = {
+  const nameStyle: CSSProperties = {
     fontFamily: CARD_FONT,
     fontWeight: 700,
     fontSize: layout.compact.name,
@@ -268,9 +268,9 @@ function CompactCopy({
     color: nameColor,
     direction,
     textAlign: align,
-    whiteSpace: "nowrap" as const,
+    whiteSpace: "nowrap",
   };
-  const descStyle = {
+  const descStyle: CSSProperties = {
     fontFamily: CARD_FONT,
     fontWeight: 400,
     fontSize: layout.compact.desc,
